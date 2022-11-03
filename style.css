@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.cabecalho{
+    background: #292929;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+li{
+    list-style: none;
+    display: inline;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.titulo{
+    text-align: center;
+    padding: 20px;
+}
+
+.div-conteudo{
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.div-conteudo:hover{
+    border: 1px solid black;
+}
+
+.imagem-principal{
+    width: 190px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.imagem-lateral{
+    width: 180px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh
+}
+
+.lateral{
+    background-color: #383838;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    padding: 10px;
+}
+
+.lateral > div{
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lateral > div:hover{
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.principal{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "principal lateral";
+    flex: 1 0 auto;
+}
+
+.rodape{
+    background: #292929;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 420px){
+    .principal{
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
